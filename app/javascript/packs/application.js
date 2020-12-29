@@ -15,3 +15,23 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+$(document).ready(function() {
+  ajaxRequest(window.location + '/table1', $("#table-1"))
+  ajaxRequest(window.location + '/table2', $("#table-2"))
+
+})
+
+function ajaxRequest(url, elementId){
+  $.ajax({
+    url: url,
+    cache: false,
+    success: function(html) {
+      elementId.replaceWith(html)
+    },
+    error: function() {
+      elementId.replaceWith("Error")
+    }
+  })
+}
