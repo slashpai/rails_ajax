@@ -20,18 +20,17 @@ require("channels")
 $(document).ready(function() {
   ajaxRequest(window.location + '/table1', $("#table-1"))
   ajaxRequest(window.location + '/table2', $("#table-2"))
-
 })
 
-function ajaxRequest(url, elementId){
+function ajaxRequest(url, selectedElement){
   $.ajax({
     url: url,
     cache: false,
-    success: function(html) {
-      elementId.replaceWith(html)
+    success: function(response) {
+      selectedElement.replaceWith(response)
     },
     error: function() {
-      elementId.replaceWith("Error")
+      selectedElement.replaceWith("Error")
     }
   })
 }

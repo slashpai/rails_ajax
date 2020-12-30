@@ -12,10 +12,6 @@ class HomeController < ApplicationController
                locals: { table1_data: get_data1 },
                layout: false
       end
-
-      format.json do
-        render json: table1_data
-      end
     end
   end
 
@@ -25,10 +21,6 @@ class HomeController < ApplicationController
         render partial: 'home/table2', 
                locals: { table2_data: get_data2 },
                layout: false
-      end
-
-      format.json do
-        render json: table2_data
       end
     end
   end

@@ -21,4 +21,4 @@ Demo project to familiarize with ajax in rails. In this project, example shown h
 
 ## TODO
 
-There is surely better way to use ajax with rails. I find ajax a bit complicated to use so I will use method as a starting point and enhance further on this
+There is surely better way to use ajax with rails. I find ajax a bit complicated to use so I will use this method as a starting point and enhance further on this.
